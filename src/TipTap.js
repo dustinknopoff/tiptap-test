@@ -7,7 +7,7 @@ const Tiptap = ({ editor }) => {
     prose.style.width = "400px";
     prose.style.position = "absolute";
     prose.style.top = "40px";
-    prose.style.left = "300px";
+    prose.style.left = "100px";
     prose.style.border = "2px solid blue";
   }
 
