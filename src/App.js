@@ -25,12 +25,15 @@ function App() {
       TextAlign,
     ],
     content: doc,
+    onSelectionUpdate: ({ editor }) =>
+      console.log(editor.getMarkAttributes("textStyle")),
+    onUpdate: ({ editor }) => console.log(editor.getJSON()),
   });
 
   return (
     <div className="App">
       <button
-        onClick={() => editor.chain().focus().setfontColor("orange").run()}
+        onClick={() => editor.chain().focus().setFontColor("orange").run()}
       >
         Orange selected
       </button>
@@ -56,7 +59,7 @@ const doc = {
               attrs: {
                 fontFamily: "HelveticaNeue",
                 fontSize: "48px",
-                color: "black",
+                fontColor: "black",
               },
             },
           ],
@@ -70,7 +73,7 @@ const doc = {
               attrs: {
                 fontFamily: "HelveticaNeue",
                 fontSize: "40px",
-                color: "black",
+                fontColor: "black",
               },
             },
           ],
@@ -84,7 +87,7 @@ const doc = {
               attrs: {
                 fontFamily: "Impact",
                 fontSize: "40px",
-                color: "black",
+                fontColor: "black",
               },
             },
           ],
@@ -98,7 +101,7 @@ const doc = {
               attrs: {
                 fontFamily: "HelveticaNeue",
                 fontSize: "40px",
-                color: "black",
+                fontColor: "black",
               },
             },
           ],
@@ -127,7 +130,7 @@ const doc = {
               attrs: {
                 fontFamily: "HelveticaNeue",
                 fontSize: "40px",
-                color: "black",
+                fontColor: "black",
               },
             },
           ],

@@ -11,11 +11,11 @@ declare module "@tiptap/core" {
       /**
        * Set the font family
        */
-      setfontColor: (fontColor: string) => Command;
+      setFontColor: (fontColor: string) => Command;
       /**
        * Unset the font family
        */
-      unsetfontColor: () => Command;
+      unsetFontColor: () => Command;
     };
   }
 }
@@ -54,10 +54,10 @@ export const fontColor = Extension.create<FontColorOptions>({
 
   addCommands() {
     return {
-      setfontColor: (fontColor) => ({ chain }) => {
+      setFontColor: (fontColor) => ({ chain }) => {
         return chain().setMark("textStyle", { fontColor }).run();
       },
-      unsetfontColor: () => ({ chain }) => {
+      unsetFontColor: () => ({ chain }) => {
         return chain()
           .setMark("textStyle", { fontColor: null })
           .removeEmptyTextStyle()
